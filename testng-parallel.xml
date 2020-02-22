@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SpiceJet Suite" thread-count="2" verbose = "1" annotations="JDK" parallel="tests">
+	<parameter name = "browser" value = "chrome"/>
+	<parameter name = "homepageURL" value = "https://www.spicejet.com/"/>
+	<parameter name = "loginURL" value = "https://book.spicejet.com/Login.aspx"/>
+  <test name="HomePage Test">
+    <classes>
+      <class name="com.spicejet.tests.TestHomepage"/>
+    </classes>
+  </test> 
+  <test name="Memberlogin Test">
+    <classes>
+      <class name="com.spicejet.tests.TestMemberLogin"/>
+    </classes>
+  </test> 
+</suite>

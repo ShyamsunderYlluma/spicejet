@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SpiceJet Suite]" parallel="tests">
+  <parameter name="homepageURL" value="https://www.spicejet.com/"/>
+  <parameter name="loginURL" value="https://book.spicejet.com/Login.aspx"/>
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="2" name="Memberlogin Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.spicejet.tests.TestMemberLogin">
+        <methods>
+          <include name="loadDriver"/>
+          <include name="Login"/>
+          <include name="tearDown"/>
+          <include name="validateTitle"/>
+        </methods>
+      </class> <!-- com.spicejet.tests.TestMemberLogin -->
+    </classes>
+  </test> <!-- Memberlogin Test(failed) -->
+  <test thread-count="2" name="HomePage Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.spicejet.tests.TestHomepage">
+        <methods>
+          <include name="ValidateTitle"/>
+          <include name="loadDriver"/>
+          <include name="searchBuses"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.spicejet.tests.TestHomepage -->
+    </classes>
+  </test> <!-- HomePage Test(failed) -->
+</suite> <!-- Failed suite [SpiceJet Suite] -->
